@@ -4,6 +4,7 @@
   "description": "MEAN stack with WebSocket",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon server.js",
     "prestart": "npm install",
     "start": "node ./bin/www",
     "gulp": "gulp",
