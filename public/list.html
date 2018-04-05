@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<title>List</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+	<style>
+		.buttons { display: block; text-align: right; }
+		.buttons .btn { float: none; }
+	</style>
+</head>
+<body>
+<div ng-controller="emailsCtrl">
+	<div class="container">
+		<h2>List of mails</h2>
+		<div class="btn-group buttons">
+			<a href="newemail" class="btn btn-primary">Creare</a>
+			<button type="button" class="btn btn-primary" ng-click="logout()">Logout</button>
+		</div>
+		<table class="table table-hover">
+			<thead>
+			<tr>
+				<th>To</th>
+				<th>Subject</th>
+				<th>Sended</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="x in emails" ng-click="showDetails()">
+				<td>{{x.eTo}}</td>
+				<td>{{x.eSubj}}</td>
+				<td><span class="glyphicon glyphicon-envelope"></span> at {{x.eSndDate}}</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<script type="text/javascript" src="javascripts/app.js"></script>
+</body>
+</html>

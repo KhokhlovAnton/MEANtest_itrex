@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <title>Details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+
+<div class="container" ng-controller="emailsCtrl">
+  <h2>Details</h2>
+  <form class="form-inline">
+    <div class="form-group col-sm-12 col-sm-offset-10" ng-show="myFactory.isAdmin">
+      <button type="button" class="btn btn-default btn-sm" ng-click="delEmail()">
+        <span class="glyphicon glyphicon-trash"></span>
+      </button>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="email">To:</label>
+      <div class="col-sm-12">
+        <p class="form-control-static">someone@example.com</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-8" for="subj">Subject:</label>
+      <div class="col-sm-12">
+        <p class="form-control-static">Loren ipsum dolor</p>
+      </div>
+    </div>
+  </form>
+  <div class="form-group">
+    <label class="control-label col-sm-12" for="message">Message:</label>
+    <div class="col-sm-12">
+      <p class="form-control-static">
+
+      </p>
+    </div>
+  </div>
+  <div class="form-group col-sm-12 col-sm-offset-10">
+    <button type="button" class="btn btn-info" ng-click="closeDetails()">Close</button>
+  </div>
+</div>
+
+<script type="text/javascript" src="javascripts/app.js"></script>
+</body>
+</html>
